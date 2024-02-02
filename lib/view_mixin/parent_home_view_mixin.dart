@@ -5,14 +5,15 @@ enum ParentHomeResult { first, second, third }
 
 mixin ParentHomeViewMixin on State<ParentHomeView> {
   void showDialogForType(ParentHomeResult value);
+  // ignore: avoid_positional_boolean_parameters
   void showProgress(bool value);
 
-  void sendRequestForService() async {
+  Future<void> sendRequestForService() async {
     showProgress(true);
     final response = await _callService();
     showProgress(false);
     if (!mounted) return;
-    _showDialogServiceResponse(response);
+    await _showDialogServiceResponse(response);
     setState(() {});
   }
 
@@ -29,13 +30,10 @@ mixin ParentHomeViewMixin on State<ParentHomeView> {
     switch (data) {
       case ParentHomeResult.first:
         showDialogForType(ParentHomeResult.first);
-        break;
       case ParentHomeResult.second:
         showDialogForType(ParentHomeResult.second);
-        break;
       case ParentHomeResult.third:
         showDialogForType(ParentHomeResult.third);
-        break;
     }
   }
 }
