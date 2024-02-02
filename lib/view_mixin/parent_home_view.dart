@@ -19,13 +19,13 @@ class _ParentHomeViewState extends State<ParentHomeView>
         onPressed: sendRequestForService,
       ),
       appBar: AppBar(
-        title: const Text("Parent Home"),
+        title: const Text('Parent Home'),
       ),
       body: Center(
         child: ValueListenableBuilder(
           valueListenable: _isLoadingNotifier,
           builder: (context, value, child) {
-            if (!value) return const Text("Okay");
+            if (!value) return const Text('Okay');
             return const CircularProgressIndicator();
           },
         ),
@@ -34,7 +34,7 @@ class _ParentHomeViewState extends State<ParentHomeView>
   }
 
   @override
-  void showDialogForType(ParentHomeResult value) async {
+  Future<void> showDialogForType(ParentHomeResult value) async {
     await showDialog<void>(
       context: context,
       builder: (BuildContext context) => AlertDialog(
