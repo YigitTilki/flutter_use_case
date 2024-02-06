@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use_case/strategy_pattern/strategy_home_view.dart';
+import 'package:flutter_use_case/basic-mvvm/basic_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const StrategyHomeView(),
+      home: const BasicView(),
     );
   }
 }
