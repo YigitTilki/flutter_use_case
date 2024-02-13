@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_use_case/special_search/special_search_view.dart';
+import 'package:flutter_use_case/global_management/global_manage_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SpecialSearchView(),
+      home: const GlobalManageView(),
     );
   }
 }

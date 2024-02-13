@@ -38,6 +38,8 @@ dependencies:
   kartal: ^3.5.0
   equatable: ^2.0.5
   json_annotation: ^4.8.1
+  flutter_bloc: ^8.1.4
+  provider: ^6.1.1
 
 dev_dependencies:
   flutter_test:
